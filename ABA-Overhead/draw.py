@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-names = ['blackscholes','bodytrack', 'facesim', 'canneal', 'fluidanimate', 'freqmine', 'swaptions', 'x264']
+names = ['blackscholes','bodytrack', 'canneal', 'facesim', 'canneal', 'fluidanimate', 'freqmine', 'swaptions', 'x264']
 fig = plt.figure()
 fig.subplots_adjust(left=0.05,right=0.95,bottom=0.07,top=0.90, wspace=0.1,hspace=0.15 )
 plt.axis('off')
@@ -30,7 +30,7 @@ for name in names:
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='exclusive', tick_label=x_labels, color=(249 / 255, 196 / 255, 153 / 255))
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='instrument', tick_label=x_labels, color=(204 / 255, 194 / 255, 217 / 255))
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='mprotect', tick_label=x_labels, color=(143 / 255, 200 / 255, 237 / 255))
-    if i == 8:
+    if i == 6:
         plt.legend()
 
     plt.bar(index, native.values, width = 0.33, ec='black', ls='-', label='native', hatch='/', color='white')
