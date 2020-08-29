@@ -57,7 +57,7 @@ set grid ytics lw 1
 
 #set arrow from 1,1 to 4,1 nohead dt 2 lw 2 lt rgb "black"
 
-set multiplot layout 2,5 rowsfirst
+set multiplot layout 2,4 rowsfirst
 #unset k
 #set k left font "15, 40" at 8,-4 maxrows 1 box
 set k left font "15, 40" at 8,10.5 maxrows 1 box
