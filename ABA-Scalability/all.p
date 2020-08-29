@@ -60,7 +60,7 @@ set grid ytics lw 1
 set multiplot layout 2,4 rowsfirst
 #unset k
 #set k left font "15, 40" at 8,-4 maxrows 1 box
-set k left font "15, 40" at 9,13 maxrows 1 box
+set k left font "15, 40" at 7,13 maxrows 1 box
 
 set title 'blackscholes' offset 0,-2.0
 plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-names = ['blackscholes','bodytrack', 'facesim', 'fluidanimate', 'freqmine', 'swaptions', 'x264']
+names = ['blackscholes','bodytrack', 'facesim', 'canneal', 'fluidanimate', 'freqmine', 'swaptions', 'x264']
 fig = plt.figure()
 fig.subplots_adjust(left=0.05,right=0.95,bottom=0.07,top=0.90, wspace=0.1,hspace=0.15 )
 plt.axis('off')
