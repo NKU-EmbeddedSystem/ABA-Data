@@ -49,4 +49,3 @@ for name in names:
     # fig.set_ylabel('elapsed time\s')
 
 plt.show()
-

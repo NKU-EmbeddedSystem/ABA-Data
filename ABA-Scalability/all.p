@@ -60,7 +60,7 @@ set grid ytics lw 1
 set multiplot layout 2,5 rowsfirst
 #unset k
 #set k left font "15, 40" at 8,-4 maxrows 1 box
-set k left font "15, 40" at 4,12 maxrows 1 box
+set k left font "15, 40" at 9,13 maxrows 1 box
 set title 'blackscholes' offset 0,-2.0
 plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
          for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
@@ -74,6 +74,11 @@ unset k
 set title 'bodytrack' offset 0,-2.0
 plot "parsec.bodytrack.dat" us 2:xtic(1) ti col w lp ls 2, \
          for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
+
+unset k
+set title 'canneal' offset 0,-2.0
+plot "parsec.canneal.dat" us 2:xtic(1) ti col w lp ls 2, \
+         for [i=3:6] '' us i:xtic(1) ti col w lp ls i
 
 unset k
 set title 'facesim' offset 0,-2.0
