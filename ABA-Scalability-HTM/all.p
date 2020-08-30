@@ -60,10 +60,10 @@ set grid ytics lw 1
 set multiplot layout 2,4 rowsfirst
 #unset k
 #set k left font "15, 40" at 8,-4 maxrows 1 box
-set k left font "15, 40" at 8,10.5 maxrows 1 box
+set k left font "15, 40" at 7,12 maxrows 1 box
 set title 'blackscholes' offset 0,-2.0
 plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 #plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
 #         '' us 3:xtic(1) ti col w lp ls 4,\
 #         '' us 4:xtic(1) ti col w lp ls 5,\
@@ -73,31 +73,31 @@ plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
 unset k
 set title 'bodytrack' offset 0,-2.0
 plot "parsec.bodytrack.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 
 unset k
 set title 'facesim' offset 0,-2.0
 plot "parsec.facesim.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 
 unset k
 set title 'fluidanimate' offset 0,-2.0
 plot "parsec.fluidanimate.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 unset k
 set title 'freqmine' offset 0,-2.0
 plot "parsec.freqmine.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 unset k
 set title 'swaptions' offset 0,-2.0
 plot "parsec.swaptions.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 unset k
 set title 'x264' offset 0,-2.0
 plot "parsec.x264.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 unset k
 set title 'geomean' offset 0,-2.0
 plot "parsec.geomean.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:4] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
 
