@@ -60,15 +60,12 @@ set grid ytics lw 1
 set multiplot layout 2,4 rowsfirst
 #unset k
 #set k left font "15, 40" at 8,-4 maxrows 1 box
+
 set k left font "15, 40" at 7,12 maxrows 1 box
+
 set title 'blackscholes' offset 0,-2.0
 plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
          for [i=3:5] '' us i:xtic(1) ti col w lp ls i;
-#plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
-#         '' us 3:xtic(1) ti col w lp ls 4,\
-#         '' us 4:xtic(1) ti col w lp ls 5,\
-#         '' us 5:xtic(1) ti col w lp ls 6,\
-#         '' us 6:xtic(1) ti col w lp ls 7,\
 
 unset k
 set title 'bodytrack' offset 0,-2.0
