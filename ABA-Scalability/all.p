@@ -60,16 +60,16 @@ set grid ytics lw 1
 set multiplot layout 2,4 rowsfirst
 #unset k
 #set k left font "15, 40" at 8,-4 maxrows 1 box
-set k left font "15, 40" at 7,13 maxrows 1 box
+set k left font "15, 40" at 5,13 maxrows 1 box
 
 set title 'blackscholes' offset 0,-2.0
 plot "parsec.blackscholes.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:7] '' us i:xtic(1) ti col w lp ls i;
 
 unset k
 set title 'bodytrack' offset 0,-2.0
 plot "parsec.bodytrack.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:7] '' us i:xtic(1) ti col w lp ls i;
 
 unset k
 set title 'facesim' offset 0,-2.0
@@ -83,11 +83,11 @@ plot "parsec.fluidanimate.dat" us 2:xtic(1) ti col w lp ls 2, \
 unset k
 set title 'freqmine' offset 0,-2.0
 plot "parsec.freqmine.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:7] '' us i:xtic(1) ti col w lp ls i;
 unset k
 set title 'swaptions' offset 0,-2.0
 plot "parsec.swaptions.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:7] '' us i:xtic(1) ti col w lp ls i;
 unset k
 set title 'x264' offset 0,-2.0
 plot "parsec.x264.dat" us 2:xtic(1) ti col w lp ls 2, \
@@ -95,5 +95,5 @@ plot "parsec.x264.dat" us 2:xtic(1) ti col w lp ls 2, \
 unset k
 set title 'geomean' offset 0,-2.0
 plot "parsec.geomean.dat" us 2:xtic(1) ti col w lp ls 2, \
-         for [i=3:6] '' us i:xtic(1) ti col w lp ls i;
+         for [i=3:7] '' us i:xtic(1) ti col w lp ls i;
 
