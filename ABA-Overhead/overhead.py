@@ -23,7 +23,7 @@ for name in names:
     print(name, native.values)
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='HST', hatch='/', tick_label=x_labels, color='white')
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='PST', hatch='\\', tick_label=x_labels, color='white')
-    plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='Pico-ST', hatch='.', tick_label=x_labels, color='white')
+    plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='PICO-ST', hatch='.', tick_label=x_labels, color='white')
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='exclusive', tick_label=x_labels, color=(210/255,32/255,39/255))
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='instrument', tick_label=x_labels, color=(56/255,89/255,137/255))
     plt.bar(index, empty.values, width = 0.33, ec='black', ls='-', label='mprotect', tick_label=x_labels, color=(127/255,165/255,183/255))
@@ -42,7 +42,7 @@ for name in names:
     
     plt.bar(index + width, exclusive.values, width = 0.33, ec='black', ls='-', label='exclusive', hatch='\\', color=(210/255,32/255,39/255))
 
-    data = pd.read_table(name + '-Pico.dat',sep='\t',index_col=0)
+    data = pd.read_table(name + '-PICO.dat',sep='\t',index_col=0)
     native = data['native']
     exclusive = data['exclusive']
     instrument = data['instrument']
@@ -56,6 +56,6 @@ for name in names:
     # fig.set_xlabel('threads')
     # fig.set_ylabel('elapsed time\s')
 
-plt.suptitle('Overhead Analysis of Pico-ST, HST and PST')
+plt.suptitle('Overhead Analysis of PICO-ST, HST and PST')
 plt.show()
 

@@ -18,10 +18,10 @@ for name in names:
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
     empty = [0,0,0,0,0,0,0]
-    plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='Pico-ST', hatch='.', tick_label=x_labels, color='white')
+    plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='PICO-ST', hatch='.', tick_label=x_labels, color='white')
     plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='HST', hatch='/', tick_label=x_labels, color='white')
     plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='PST', hatch='\\', tick_label=x_labels, color='white')
-    plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='PST-remap', hatch='o', tick_label=x_labels, color='white')
+    plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='PST-REMAP', hatch='o', tick_label=x_labels, color='white')
     plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='native', tick_label=x_labels, color='white')
     plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='exclusive', tick_label=x_labels, color=(249 / 255, 196 / 255, 153 / 255))
     plt.bar(index, empty, width = 0.20, ec='black', ls='-', label='instrument', tick_label=x_labels, color=(204 / 255, 194 / 255, 217 / 255))
@@ -62,18 +62,18 @@ for name in names:
     plt.bar(index + width * 2, native.values, width = 0.20, ec='black', ls='-', label='native', hatch='\\', color='white')
     plt.bar(index + width * 2, exclusive.values, width = 0.20, ec='black', ls='-', label='exclusive', hatch='\\', bottom=native.values, color=(249 / 255, 196 / 255, 153 / 255))
 
-    #PST-remap
+    #PST-REMAP
     if name in ['blackscholes', 'bodytrack', 'freqmine', 'swaptions']:
         data = pd.read_table(name + '-remap.dat',sep='\t',index_col=0)
         native = data['native']
-        remap = data['remap']
+        REMAP = data['REMAP']
         mprotect = data['mprotect']
         pf = data['page fault']
     
         plt.bar(index + width * 3, native.values, width = 0.20, ec='black', ls='-', label='native', hatch='o', color='white')
-        plt.bar(index + width * 3, remap.values, width = 0.20, ec='black', ls='-', label='remap', hatch='o', bottom=native.values, color='lightcoral')
-        plt.bar(index + width * 3, mprotect.values, width = 0.20, ec='black', ls='-', label='mprotect', hatch='o', bottom=native.values+remap.values, color=(143 / 255, 200 / 255, 237 / 255))
-        plt.bar(index + width * 3, pf.values, width = 0.20, ec='black', ls='-', label='page fault', hatch='o', bottom=native.values+remap.values+mprotect.values, color='yellow')
+        plt.bar(index + width * 3, REMAP.values, width = 0.20, ec='black', ls='-', label='remap', hatch='o', bottom=native.values, color='lightcoral')
+        plt.bar(index + width * 3, mprotect.values, width = 0.20, ec='black', ls='-', label='mprotect', hatch='o', bottom=native.values+REMAP.values, color=(143 / 255, 200 / 255, 237 / 255))
+        plt.bar(index + width * 3, pf.values, width = 0.20, ec='black', ls='-', label='page fault', hatch='o', bottom=native.values+REMAP.values+mprotect.values, color='yellow')
 
 
     if i > 5:
